@@ -13,20 +13,26 @@ function UserPost() {
   };
   return (
     <>
-   
-        <h3>User Post</h3>
-    
-    {post && post.map((dataPost)=>
-    (
-        <>
-        <h6 key={dataPost.id}>{dataPost.title}</h6>
-        <p key={dataPost.body} className="border">{dataPost.body}</p>
-        </>
-    )
-    )}
-      <button className="btn btn-success" onClick={loadPost}>View Post</button>
-      
-     
+      {post &&
+        post.map((dataPost) => (
+          <>
+            <div className="col-sm-6 shadow p-3 mb-5 bg-body rounded">
+              <div className="card">
+                <div className="card-body">
+                  <h5 class="card-title shadow-sm p-3 mb-5 bg-body rounded" key={dataPost.id}>
+                    {dataPost.title}
+                  </h5>
+                  <p class="card-text" key={dataPost.body}>
+                    {dataPost.body}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </>
+        ))}
+      <button className="btn btn-success" onClick={loadPost}>
+        View Post
+      </button>
     </>
   );
 }

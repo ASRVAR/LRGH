@@ -3,9 +3,9 @@ import React from "react";
 const Navbar = (props) => {
   return (
     <div>
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
               <a className="navbar-brand" href="#">
                 OFA..!! Data{" "}
