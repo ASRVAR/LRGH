@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
-import UserPost from "./userPost/UserPost";
+import UserPost from './userPost/UserPost'
+
 
 function Userlist() {
   const [user, setUser] = useState();
+  let PageSize = 10;
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+ 
   // const [view, setView] = useState(false);
   //   useEffect(() => {
   //     //fetch('https://gorest.co.in/public/v2/users').than((response)=>response.json()).then((userData)=>{setUser(userData)})
@@ -16,6 +22,7 @@ function Userlist() {
       });
   };
 
+  
   //------------------------------END-------------------------------------------------
   return (
     <>
@@ -53,10 +60,11 @@ function Userlist() {
                 <button className="btn btn-success" onClick={viewData}>
                   View Data
                 </button>
-            
+              
           </div>
           <div className="col-md-6">
             <UserPost />
+          
           </div>
         </div>
       </div>

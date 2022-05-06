@@ -1,15 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-import Userlist from './Userlist'
-
-
+import logo from "./logo.svg";
+import "./App.css";
+import Userlist from "./Userlist";
+import Navbar from "./shortComponent/Navbar";
+import Slider from "./shortComponent/Slider"
 
 function App() {
   return (
-    <div className="App mt-3">
-     
-   
-    <Userlist />
+    <div >
+      <Navbar
+        titleHome="Home"
+        titleAbout="About Us"
+        titleContact="Contact"
+        titleGallery="Gallery"
+        titlePostList="User Post & List"
+      />
+     <Slider />
     </div>
   );
 }
