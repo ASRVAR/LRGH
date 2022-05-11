@@ -26,13 +26,7 @@ function Userlist() {
   //------------------------------END-------------------------------------------------
   return (
     <>
-      <div className="container">
-        <div className="row mt-3">
-          <div className="col-md-6">
-            <h3>User List</h3>
-            <div className="row">
-            
-            </div>
+    
             <table className="table table-bordered">
               <thead>
                 <tr>
@@ -40,7 +34,7 @@ function Userlist() {
                   <th>Name</th>
                   <th>Email Id</th>
                   {/* <th>Gender</th> */}
-                  <th>Status</th>
+                  {/* <th>Status</th> */}
                 </tr>
               </thead>
               <thead>
@@ -51,7 +45,7 @@ function Userlist() {
                       <td>{showData.name}</td>
                       <td>{showData.email}</td>
                       {/* <td>{showData.gender}</td> */}
-                      <td>{showData.status}</td>
+                      {/* <td>{showData.status}</td> */}
                     </tr>
                   ))}
               </thead>
@@ -60,14 +54,7 @@ function Userlist() {
                 <button className="btn btn-success" onClick={viewData}>
                   View Data
                 </button>
-              
-          </div>
-          <div className="col-md-6">
-            <UserPost />
-          
-          </div>
-        </div>
-      </div>
+      
     </>
   );
 }
